@@ -1,0 +1,7 @@
+cradle:
+  cabal:
+    component: "{{cookiecutter.project_name}}-tests"
+
+dependencies:
+  - shell.nix
+  - default.nix

@@ -22,10 +22,11 @@ let
     ];
     buildInputs = with pkgs.haskellPackages; [
       myHaskellPackages.cabal-install
-      ghcid
       ormolu
       hlint
+      apply-refact
       (import sources.niv {}).niv
+      (import sources.ghcide-nix {})."ghcide-${compiler}"
       pkgs.nixpkgs-fmt
     ];
     withHoogle = true;

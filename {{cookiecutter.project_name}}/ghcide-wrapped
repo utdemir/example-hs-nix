@@ -1,0 +1,2 @@
+#! /usr/bin/env nix-shell
+#! nix-shell --pure --run "ghcide --lsp" ./shell.nix

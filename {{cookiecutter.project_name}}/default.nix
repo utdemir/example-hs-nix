@@ -1,4 +1,4 @@
-{ compiler ? "ghc865" }:
+{ compiler ? "ghc8101" }:
 
 let
   sources = import ./nix/sources.nix;
@@ -39,10 +39,10 @@ let
     config.Cmd = [ "${exe}/bin/{{cookiecutter.project_name}}" ];
   };
 in
-  {
-    inherit shell;
-    inherit exe;
-    inherit docker;
-    inherit myHaskellPackages;
-    "{{cookiecutter.project_name}}" = myHaskellPackages."{{cookiecutter.project_name}}";
-  }
+{
+  inherit shell;
+  inherit exe;
+  inherit docker;
+  inherit myHaskellPackages;
+  "{{cookiecutter.project_name}}" = myHaskellPackages."{{cookiecutter.project_name}}";
+}
